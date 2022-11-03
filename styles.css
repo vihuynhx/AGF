@@ -1,0 +1,145 @@
+*
+{
+    box-sizing: border-box;
+}
+
+main h1
+{
+    font-size: 27pt;
+    margin-left: 35px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+main hr
+{
+    margin-left: 35px;
+    margin-right: 35px;
+}
+
+.row1, .row2 /*Hvad der skal ske for begge rækker*/
+{
+    align-items:center;
+    margin-left: 25px;
+    margin-right: 25px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    gap: 15px;
+}
+
+.row1>div, .row2>div /*Hvad der skal ske for begge rækker*/
+{
+    width: 30%;
+    height: 350px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+}
+
+.row1 > div:first-child /*række 1 billede nr.1 */
+{
+    width:70%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("images/man.png");
+    
+}
+.row1 > div:nth-child(2) /*række 1 billede nr.2 */
+{
+    width:30%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("images/girls.png");
+}
+.row1 > div:nth-child(3) /*række 1 billede nr.3 */
+{
+    width:30%;
+    background-image:  linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("images/ball.png"); /*billedet mørkere*/
+}
+
+/*--------*/
+
+.row2 > div:first-child /*række 2 billede nr.1 */
+{
+    width:30%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("images/messi.png");
+}
+
+.row2 > div:nth-child(2) /*række 2 billede nr.2 */
+{
+    width:70%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("images/play.jpeg");
+}
+
+.row2 > div:nth-child(3) /*række 2 billede nr.3 */
+{
+    width:30%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("images/ronaldo.jpeg");
+}
+/*--------*/
+
+/*teksten i boksene*/
+#nyhed
+{
+    font-size: 10pt;
+    color: white;
+    font-weight: bold;
+    padding-left: 25px;
+    text-transform: uppercase;
+    margin-top: 25px;
+    font-family: 'Times New Roman', Times, serif;
+}
+#cardtopic
+{
+    font-size: 15pt;
+    color: white;
+    font-weight: bold;
+    padding-left: 25px;
+    text-transform: uppercase;
+    font-family: 'Times New Roman', Times, serif;
+    letter-spacing: 1px;
+
+}
+
+/*Hvad der sker når vinduet gøres mindre*/
+@media only screen and (max-width: 768px ) 
+{ 
+    .row1,.row2
+    {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    /*fortæller at billedet fortsat skal være 100% selvom screen kommer under 768px*/
+    .row1 > div,.row2 > div 
+    {
+        width: 100%;
+    }
+
+    .row1 > div:first-child,.row2 > div:first-child
+    {
+        width: 100%;
+    }
+
+    .row1 > div:nth-child(2),.row2 > div:nth-child(2)
+    {
+        width: 100%;
+    }
+
+    .row1 > div:nth-child(3),.row2 > div:nth-child(3)
+    {
+        width: 100%;
+    }
+}
+
+/*Billedet highlighest når man hover*/
+ .row1 div:hover, .row2 div:hover
+{
+    filter: brightness(150%);
+
+}
+
+header
+{
+    background-image:url("images/header.jpg");
+    height:500px;
+}
